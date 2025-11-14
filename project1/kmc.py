@@ -40,18 +40,38 @@ for i in range(len(x)):
     q = []
     for j in range(k):
         d = euclidian_distance([x[i],y[i]], c[j])
-        q.append(d)
+        q.append([d,[x[i],y[i]]])
     l.append(q)
+
 
 # the nearest distance
 l.sort()
-print(l[:1])
+
+
+m = [] # so we got the coordinates of the points with the nearest distances
+
+
+for i in range(k):
+    m.append(l[i][1][1])
+
+print(m)
+
+
 
 # classification 
+# -> the task is to find the coordinate of the data point from which there is the least distance of the centroid
+
+
 
 
 # recalculation of the centroids
 
+
+
+
 '''plot of the data'''
+
+
 #plt.scatter(x,y)
+#plt.scatter(c[0][:], c[1][:])
 #plt.show()
